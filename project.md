@@ -71,7 +71,7 @@ terraform {
 
 ![Terraform State](images/tfstate.png)
 
-**Step 2 - Refactor The Code Using Modularization**
+**Step 2 - Create Folder & Subfolders To House Code For Resources**
 ---
 
 - Create a new folder called `modules`. This is the folder that will house all modularization that would occur in this project.
@@ -82,3 +82,22 @@ terraform {
 
 ![Folder Structure](images/structure.png)
 
+**Step 3 - Refactor Code Using Modularization**
+---
+
+*The entire modularized code can be found [here](https://github.com/jaymineh/terraform/tree/e5d4423b4e33c726eaa4d9ec62e55555a032574b/project%2018)*
+
+*The code would have to be reworked as they have been tailored to fit my requirements.*
+
+**Step 4 - Deploy Infrastructure**
+---
+
+- Run `terraform plan` to view the execution plan in order to validate configuration. *You can also run `terraform validate` as an extra step*.
+
+- Run `terraform apply` to initiate infrastructure deployment.
+
+- After the infrastructure has been deployed without errors, run `terraform destroy` to destroy the infrastructure.
+
+![Terraform Destroy](images/destroy.png)
+
+**Project Deployed Successfully!**
