@@ -67,7 +67,18 @@ terraform {
 }
 ```
 
+- Run `terraform init` to initialize the backend, which will inform terraform to push the state file to the cloud. After that, run `terraform apply` to deploy configuration. See screenshot below for results.
+
+![Terraform State](images/tfstate.png)
+
 **Step 2 - Refactor The Code Using Modularization**
 ---
 
--
+- Create a new folder called `modules`. This is the folder that will house all modularization that would occur in this project.
+
+- Create the following subfolders inside the `modules` folder you just created. They are: **ALB, VPC, EFS, RDS, Compute, Security & Autoscaling**.
+
+- For each of the newly created subfolders, create the following files as they would house configurations respective to their folder names: **main.tf, variables.tf & output.tf**. *Some of the folders may not necessarily need a `main.tf` or `output.tf` file. Unused files can be deleted or renamed*.
+
+![Folder Structure](images/structure.png)
+
